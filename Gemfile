@@ -9,13 +9,9 @@ group :production do
   gem 'pg'
 end 
 
-#as per instructions at Stackexchange
-#(http://stackoverflow.com/questions/7963561/heroku-stack-cedar-cannot-run-git-push-heroku-master)
-#below did not work, so I commented it out:
-
-#group :production, :test do 
-#  gem 'sqlite3'
-#end
+group :development, :test do 
+  gem 'sqlite3'
+end
 
 
 # Gems used only for assets and not required
