@@ -1,4 +1,6 @@
 Ponies::Application.routes.draw do
+  devise_for :users
+
   get 'about' => 'pages#about'
   root :to => 'pages#home'
   #get "pages/home"<--this was auto created when I 

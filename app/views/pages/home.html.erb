@@ -1,3 +1,6 @@
+<% if user_signed_in? %>
+<h1>WooHoo! You Logged In!</h1>
+<% else %>
 <div class="center hero-unit">
  <h1>Welcome To Ponies Pinterest!</h1>
   <p>Created by <a href="http://pistachiopony.com">Pistachio Pony</a></p>
@@ -5,7 +8,9 @@
 	I wanted to practice my rails and create a Pinterest style application.
 	Thanks for dropping by!
 </p>
-<p> <%= link_to 'Sign up now!',  "#" , class: "btn btn-large btn-primary" %> </p>
-   
+<p> <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-large btn-primary" %> 
+ </p>
+
 </div>
 	
+<% end %>
