@@ -67,4 +67,14 @@ Ponies::Application.configure do
   
   #In production, :host should be set to the actual host of your application.
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Paperclip should use Amazon S3 on Heroku
+config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => "poniespint",
+    :access_key_id => "AKIAJND5QATAHAUHG6YQ",
+    :secret_access_key => "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"
+  }
+  }
 end
