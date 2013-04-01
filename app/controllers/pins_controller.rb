@@ -3,9 +3,8 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.order ("created_at desc")
-
-    respond_to do |format|
+    @pins = Pin.order("created_at desc")
+      respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @pins }
     end
@@ -80,5 +79,6 @@ class PinsController < ApplicationController
       format.html { redirect_to pins_url }
       format.json { head :no_content }
     end
-  end
+ end
 end
+
