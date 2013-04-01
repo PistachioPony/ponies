@@ -72,9 +72,9 @@ Ponies::Application.configure do
 config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => "poniespint",
-    :access_key_id => "AKIAJND5QATAHAUHG6YQ",
-    :secret_access_key => "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"
+    :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
   }
 end
