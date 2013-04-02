@@ -1,12 +1,15 @@
 Ponies::Application.routes.draw do
+  get "users/show"
+
   resources :pins
 
 
   devise_for :users
+  match 'users/:id' => 'users#show', as: :user
 
   get 'about' => 'pages#about'
+
   root :to => 'pins#index'
-  #get "pages/home"<--this was auto created when I 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
